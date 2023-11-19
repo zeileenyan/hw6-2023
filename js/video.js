@@ -52,6 +52,15 @@ document.querySelector("#skip").addEventListener("click", function() {
 
 //mute video
 
+
+//update slider value
+document.querySelector("#slider").addEventListener("input", function() {
+	video.volume = document.querySelector("#slider").value / 100;
+	document.querySelector("#volume").textContent = video.volume * 100 + "%";
+	console.log("the current volume is", video.volume);
+});
+
+
 //add oldSchool class
 document.querySelector("#vintage").addEventListener("click", function() {
 	video.classList.add("oldSchool");
