@@ -27,7 +27,7 @@ document.querySelector("#play").addEventListener("click", function() {
 document.querySelector("#slower").addEventListener("click", function() {
 	console.log("Slow Down");
     video.playbackRate *= 0.9;
-	console.log("speed is", video.playbackRate);
+	console.log("current speed:", video.playbackRate);
 });
 
 
@@ -35,7 +35,7 @@ document.querySelector("#slower").addEventListener("click", function() {
 document.querySelector("#faster").addEventListener("click", function() {
 	console.log("Speed Up");
 	video.playbackRate *= 1.1;
-	console.log("speed is", video.playbackRate);
+	console.log("current speed:", video.playbackRate);
 });
 
 //skip video
@@ -46,7 +46,7 @@ document.querySelector("#skip").addEventListener("click", function() {
 		video.currentTime = 0;
 	}
 
-	console.log("video time is", video.currentTime);
+	console.log("video time:", video.currentTime);
 });
 
 
@@ -57,7 +57,7 @@ document.querySelector("#skip").addEventListener("click", function() {
 document.querySelector("#slider").addEventListener("input", function() {
 	video.volume = document.querySelector("#slider").value / 100;
 	document.querySelector("#volume").textContent = video.volume * 100 + "%";
-	console.log("the current volume is", video.volume);
+	console.log("current volume:", video.volume);
 });
 
 
