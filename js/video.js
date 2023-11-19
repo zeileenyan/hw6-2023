@@ -51,6 +51,17 @@ document.querySelector("#skip").addEventListener("click", function() {
 
 
 //mute video
+document.querySelector("#mute").addEventListener("click", function() {
+	if (video.muted) {
+		document.querySelector("#mute").innerHTML = "Mute";
+		video.muted = false;
+		console.log("Muted Video");
+	} else {
+		document.querySelector("#mute").innerHTML = "Unmute";
+		video.muted = true;
+		console.log("Unmuted Video");
+	}
+});
 
 
 //update slider value
