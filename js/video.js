@@ -14,6 +14,7 @@ window.addEventListener("load", function() {
 document.querySelector("#play").addEventListener("click", function() {
  	console.log("Play video");
 	video.play();
+	document.querySelector("#volume").textContent = video.volume * 100 + "%";
  });
 
  //pause video
@@ -49,3 +50,15 @@ document.querySelector("#skip").addEventListener("click", function() {
 });
 
 
+//mute video
+
+//add oldSchool class
+document.querySelector("#vintage").addEventListener("click", function() {
+	video.classList.add("oldSchool");
+});
+
+
+//remove oldSchool class
+document.querySelector("#vintage").addEventListener("click", function() {
+	video.classList.remove("oldSchool");
+});
